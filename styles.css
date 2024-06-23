@@ -9,12 +9,14 @@
     box-sizing: border-box;
     font-family: 'roboto', sans-serif;
 }
+
 body{
     display: grid;
     grid-template: 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr 1fr;
     background-color: #d1d5db;
     height: 1300px;
-    width: 1400px;
+  overflow-x: hidden;
+
 
 }
 .navbar{
@@ -23,7 +25,7 @@ body{
     background-color: #0ea5e9;
     height: 1300px;
     font-size: 1.5rem;
-    position: fixed;
+ 
 }
 .other-pages > li>  img{
     max-width: 20px;
@@ -73,11 +75,13 @@ body{
     grid-row: 1;
     grid-column: 2/5;
     display: grid;
-    grid-template: 130px 130px 130px 330px 330px 330px 330px 330px/ 1fr 1fr  ; 
+    grid-template: 130px 130px 130px 330px 175px 330px 330px 330px/ 1fr 1fr  ; 
     border: 1px  grey;
-    width: 150%;
+    width: 2000px;
     height: 280px;
     margin: 0;
+    position: absolute;
+    left: 350px;
 ;
     box-shadow: -1px 9px 5px 0px rgba(0, 0, 0, 0.5);
     background-color: white;
@@ -119,7 +123,7 @@ body{
     padding: 0.5rem;
 
 }
-.notification > img{
+.notification > img, .trend img{
     max-width: 60px;
 }
 
@@ -130,8 +134,8 @@ body{
     gap: 1rem;
 }
 
-.cat{
-    border: 1px solid white;
+.cat, .trend img{
+    border: 1px none white;
     border-radius: 50%;
 }
 
@@ -173,7 +177,7 @@ body{
 .projects{
     display: grid;
     grid-template: 15rem 15rem 15rem/ 400px 400px;
-    gap: 1rem;
+    gap: 2rem;
 }
 .projects > div{
     font-size: 0.7rem;
@@ -198,7 +202,8 @@ body{
     grid-column: 2/3;
     position: relative;
     margin: 1rem;
-    top: -3rem;
+    top: -6rem;
+ 
 }
 .Announcement > .text>div{
     font-size: 0.8rem;
@@ -226,6 +231,7 @@ body{
     align-items: center;
     border-radius: 10px;
     background: white;
+    box-shadow: 9px 0px 4px -7px black; 
 
 }
 .top-r{
@@ -235,4 +241,32 @@ body{
 .bottom-r{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px; 
+}
+
+.trend{
+    grid-row: 6;
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+   
+    position: relative;
+    top: -2rem;
+    
+
+}
+.trend-content{
+    background-color: white;
+    width: 20rem;
+    border-radius: 10px;
+    box-shadow: 9px 0px 4px -7px black; 
+}
+.trend-content > div{
+    display:flex;
+    margin: 1rem;
+    
+}
+.trend h2{
+    margin: 1rem;
 }
